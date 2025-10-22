@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-ui-test4
+  name: guestbook-ui-test3
 spec:
   replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: guestbook-ui-test4
+      app: guestbook-ui-test3
   template:
     metadata:
       labels:
-        app: guestbook-ui-test4
+        app: guestbook-ui-test3
         eti: vffff
 
     spec:
       containers:
         - image: quay.io/argoprojlabs/argocd-e2e-container:0.1
-          name: guestbook-ui-test4
+          name: guestbook-ui-test3
           ports:
             - containerPort: 80
